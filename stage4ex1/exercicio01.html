@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+/*Bora praticar e rever tudo o que foi ensinado na aula? **💜**
+Nesse desafio, você irá solicitar ao usuário que ele insira **dois números** e, a partir daí, calcular:
+
+- [ ]  A soma dos dois números;
+- [ ]  A subtração dos dois números;
+- [ ]  A multiplicação dos dois números;
+- [ ]  A divisão dos dois números;
+- [ ]  O resto da divisão dos dois números;
+
+Fácil até aqui, né? Bora se desafiar? 👀 🧑‍🚀
+
+- [ ]  Verifique se a soma dos dois números é par ~~(ou ímpar)~~;
+- [ ]  Verifique se os dois números inseridos são iguais ~~(ou diferentes)~~.
+
+Lembre-se de sempre mostrar na tela o resultado de cada uma dessas operações!
+O resultado final desse desafio deve ser algo em torno de: */
+
+        let numberA = prompt('Adicione um Número')
+        let numberB = prompt('Outro Número')
+         
+        numberA = Number(numberA)
+        numberB = Number(numberB)
+
+        const somar = numberA + numberB
+        const subtrair = numberA - numberB
+        const multiplicar = numberA * numberB
+        const dividir = numberA / numberB
+        const restoDiv = numberA % numberB
+        const igual = numberA === numberB
+        const parOuImpar = somar % 2 !== 0
+
+        alert ('A soma é =' + somar)
+        
+        
+        alert ('A subtração é =' + subtrair)
+        alert ('A multiplicação é =' + multiplicar)
+        alert ('A divisão é =' + dividir)
+        alert ('O resto da divisão é =' + restoDiv)
+
+        if (igual){
+            alert(`Dois número que foram inseridos são iguais ${numberA} e ${numberB}`)
+        }
+        else {
+            alert('Números adicinados são Diferentes')
+        }
+        
+        if (parOuImpar){
+            alert(`o resultado da soma é ímpar`)
+        }
+        else{
+            alert('o resultado da soma é par ')
+        } 
+
+        document.write(
+
+           `Os numero inseridos são ${igual}<br>
+            A soma é = ${somar} <br>
+            A subtração é = ${subtrair} <br>
+            A multiplicação é = ${multiplicar}<br>
+            A divisão é = ${dividir}<br>
+            O restio da divisão = ${restoDiv}<br>
+            `
+     
+
+
+
+
+        )
+    
+
+
+    </script>
+    
+</body>
+</html>
