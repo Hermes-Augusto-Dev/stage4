@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        /*Nesse desafio você irá criar uma lista de **estudantes** e, cada estudante dentro dessa lista, deverá conter os seguintes dados:
+        <aside>
+💡 Principais pontos abordados nesse desafio:
+
+- Estrutura de dados com objetos;
+- Estrutura de repetição;
+- Criação de funções;
+- Operadores comparativos;
+
+</aside>
+
+- nome;
+- nota da primeira prova;
+- nota da segunda prova.
+
+Depois de criada a lista:
+
+- [ ]  Crie uma **função** que irá calcular a média das notas de cada aluno;
+- [ ]  Supondo que a média, para esse concurso é **7**, verifique **se** cada aluno obteve sucesso ou não em entrar no concurso e mostre uma mensagem na tela.
+
+O resultado final desse desafio deve ser algo em torno de: */
+
+         /*   let student = prompt("Nome do estudante")
+            let note1 = prompt(" A nota da primeira prova")
+            let note2 = prompt("A nota da segunda prova")
+            let note3 = prompt("A nota da terceira prova")
+
+            let average = (( Number(note1) + Number(note2) + Number(note3) ) / 3).toFixed(1)
+
+        document.write(
+            "Nome do Aluno: " + student +"<br>",
+            "Nota primeira prova: " + note1 + "<br>",
+            "Npta segunda prova : " + note2 + "<br>",
+            "Nota terceira prova: " + note3 + "<br>",
+            "Média do aluno: " + average
+           );
+           alert(
+            `Aluno: ${student} 
+             Nota1°: ${note1}
+             Nota2°: ${note2}
+             Nota3°: ${note3}
+             Média: ${average}
+
+
+           `)*/
+
+           let alunos = [
+            {
+                nome:"Hermes Augusto",
+                nota1: 7,
+                nota2: 5,
+                nota3: 10
+            },
+            {
+                nome:"Luiz Eduardo",
+                nota1: 8,
+                nota2: 9,
+                nota3: 10
+            },
+            {
+                nome:"Cesae Pereira",
+                nota1: 7,
+                nota2: 5,
+                nota3: 8
+            }
+
+           ]
+
+           let nomeAlunas = []
+
+           for(let aluno of alunos){
+               
+                aluno.media = media(aluno.nota1,aluno.nota2,aluno.nota3).toFixed(1)
+                aluno.aprovado = aprovado (aluno.media)
+                 nomeAlunas.push(`
+                 ${aluno.nome}  ${aluno.media} ${aluno.aprovado}`)
+           }
+
+
+           function media(nota1,nota2,nota3){
+
+            return (nota1+nota2+nota3)/3
+
+           }
+
+           function aprovado (media){
+            return media >= 7 ? "aprovado":"reprovado"
+           }
+           alert(nomeAlunas)
+
+
+    </script>
+</body>
+</html>
